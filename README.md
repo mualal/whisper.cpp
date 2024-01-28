@@ -87,6 +87,19 @@ make
 ./main -f samples/jfk.wav
 ```
 
+If there is a Metal error (old macOS versions), use:
+
+```bash
+# clean previous build attempt
+make clean
+
+# build the main example without Metal
+make WHISPER_NO_METAL=1
+
+# transcribe an audio file
+./main -f samples/jfk.wav
+```
+
 ---
 
 For a quick demo, simply run `make base.en`:
